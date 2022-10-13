@@ -9,7 +9,31 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
         <Sidenav />
       </div>
       <main className="overflow-y-auto">
-        <header className="bg-white h-[6.5rem] w-full head-nav"></header>
+        <header className="head-nav">
+          <div className="input-wrap">
+            <input type="text" placeholder="Search for anything" />
+            <div className="search-wrap ">
+              <img src="/vectors/searchIcon.svg" alt="" />
+            </div>
+          </div>
+          <div className="right">
+            <p className="underline text-purple">Docs</p>
+            <div className="bell-icon">
+              <img src="/vectors/bellIcon.svg" alt="" />
+            </div>
+            <div className="pic-icon">
+              <img
+                src="/images/pictureIcon.png"
+                className="rounded-full"
+                alt=""
+              />
+            </div>
+            <div className="user-wrap">
+              <p>Adedeji</p>
+              <img src="/vectors/userdropIcon.svg" alt="" />
+            </div>
+          </div>
+        </header>
         <section className="bg-grey">{children}</section>
       </main>
     </div>

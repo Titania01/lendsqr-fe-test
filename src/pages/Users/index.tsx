@@ -28,7 +28,11 @@ const Users = () => {
     email: user.email,
     phonenumber: user.phoneNumber,
     date: moment(user.createdAt).format("MMM DD, YYYY HH:MMa"),
-    status: "",
+    status: (
+      <span className="bg-[#39CD62] text-[#39CD62] bg-opacity-5 px-3 py-2 rounded-[100px]">
+        active
+      </span>
+    ),
   }));
 
   const menu = (

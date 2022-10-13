@@ -3,4 +3,24 @@
 }
 .head-nav {
   box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+  @apply bg-white flex items-center justify-between pl-[5rem] pr-8 h-[6.5rem] w-full;
+
+  .input-wrap {
+    @apply flex justify-between border border-opacity-20 border-purple w-[25rem]  items-center rounded-lg;
+
+    input {
+      @apply outline-none border-none pl-4;
+    }
+
+    .search-wrap {
+      @apply bg-blueish rounded-r-lg h-10 w-14 flex items-center justify-center;
+    }
+  }
+  .right {
+    @apply flex items-center space-x-8;
+
+    .user-wrap {
+      @apply flex gap-2 cursor-pointer;
+    }
+  }
 }

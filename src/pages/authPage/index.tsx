@@ -18,7 +18,7 @@ const AuthPage = () => {
           <p className="text-primary text-xl">Enter details to login.</p>
 
           <div className="input-wrap mb-6 mt-[3.75rem]">
-            <input placeholder="Email" />
+            <input placeholder="Email" type="email" />
           </div>
           <div className="input-wrap flex mb-6 justify-between items-center">
             <input placeholder="Password" type="password" />
