@@ -1,5 +1,5 @@
 import { InputHTMLAttributes, DetailedHTMLProps, ReactNode } from "react";
-import { generateId } from "../../utils/generatedId";
+import { generateId } from "../../../utils/generatedId";
 import "./Input.scss";
 
 type InputProps = {
