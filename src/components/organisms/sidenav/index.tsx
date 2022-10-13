@@ -94,28 +94,29 @@ const Sidenav = () => {
         <p>Switch Organization</p>
         <img src="/vectors/arrowdown.svg" className="cursor-pointer" />
       </div>
-      {nav.map((n, i) => (
-        <div className="nav-link">
-          <span>{n.title}</span>
-          {n.hasOwnProperty("submenu") && (
-            <div className="submenu-nav">
-              {n.submenu.map((menu, index) => (
-                <div
-                  className={`link-wrap ${
-                    isActive == menu.link ? "active" : ""
-                  }`}
-                >
-                  <div className="vectors-wrap">
-                    <img src={`/vectors/${menu.icon}`} />
+      <div className="flex-grow overflow-y-auto">
+        {nav.map((n, i) => (
+          <div className="nav-link">
+            <span>{n.title}</span>
+            {n.hasOwnProperty("submenu") && (
+              <div className="submenu-nav">
+                {n.submenu.map((menu, index) => (
+                  <div
+                    className={`link-wrap ${
+                      isActive == menu.link ? "active" : ""
+                    }`}
+                  >
+                    <div className="vectors-wrap">
+                      <img src={`/vectors/${menu.icon}`} />
+                    </div>
+                    <NavLink to={menu.link}>{menu.title}</NavLink>
                   </div>
-                  <NavLink to={menu.link}>{menu.title}</NavLink>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      ))}
-      {}
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </aside>
   );
 };

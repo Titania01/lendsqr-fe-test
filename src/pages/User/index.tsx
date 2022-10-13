@@ -1,13 +1,38 @@
-import Button from "../../atoms/button";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import Button from "../../components/atoms/button";
+import { fetchFromApi } from "../../services";
 import DashboardLayout from "../../templates/dashboardLayout";
 import Avatar from "../../vectors/Avatar";
 import "./SingleUser.scss";
 
 const User = () => {
+  const search = useParams();
+  const [user, setUser] = useState<any>(null);
+  const fetchUser = async () => {
+    try {
+      const response = await fetchFromApi({
+        url: `/users/${search.id}`,
+        method: "get",
+      });
+      setUser(response.data);
+    } catch (error) {}
+  };
+  useEffect(() => {
+    fetchUser();
+  }, []);
+
+  const navigate = useNavigate();
+
+  const currency = user?.profile.currency;
+
   return (
     <DashboardLayout>
       <div className="single-user-wrap">
-        <div className="user-pointer">
+        <div
+          className="user-pointer cursor-pointer"
+          onClick={() => navigate("/users")}
+        >
           <div className="arrow">
             <img src="/vectors/pointarrowIcon.svg" alt="" />
           </div>
@@ -43,8 +68,10 @@ const User = () => {
             </div>
             <div className="grace">
               <div className="detail">
-                <h3>Grace Effiom</h3>
-                <p>LSQFf587g90</p>
+                <h3>
+                  {user?.profile.firstName + " " + user?.profile.lastName}
+                </h3>
+                <p>{user?.orgName}</p>
               </div>
               <div className="line"></div>
               <div className="user-tier">
@@ -55,8 +82,8 @@ const User = () => {
               </div>
               <div className="line"></div>
               <div className="providus">
-                <h3>₦200,000.00</h3>
-                <p>9912345678/Providus Bank</p>
+                <h3>₦{user?.accountBalance?.toLocaleString()}</h3>
+                <p>{user?.accountNumber}/Providus Bank</p>
               </div>
             </div>
           </div>
@@ -86,11 +113,11 @@ const User = () => {
               </div>
               <div className="detail-wrapper">
                 <p className="top-paragraph">EMAIL ADDRESS</p>
-                <div className="bottom-paragraph">grace@gmail.com</div>
+                <div className="bottom-paragraph">{user?.email}</div>
               </div>
               <div className="detail-wrapper">
                 <p className="top-paragraph">BVN</p>
-                <div className="bottom-paragraph">07060780922</div>
+                <div className="bottom-paragraph">{user?.profile.bvn}</div>
               </div>
               <div className="detail-wrapper">
                 <p className="top-paragraph">GENDER</p>
@@ -119,34 +146,48 @@ const User = () => {
             <div className="upper-section">
               <div className="detail-wrapper">
                 <p className="top-paragraph">LEVEL OF EDUCATION</p>
-                <div className="bottom-paragraph">B.Sc</div>
+                <div className="bottom-paragraph">{user?.education.level}</div>
               </div>
               <div className="detail-wrapper">
                 <p className="top-paragraph">EMPLOYMENT STATUS</p>
-                <div className="bottom-paragraph">Employed</div>
+                <div className="bottom-paragraph">
+                  {user?.education.employmentStatus}
+                </div>
               </div>
               <div className="detail-wrapper">
                 <p className="top-paragraph">SECTOR OF EMPLOYMENT</p>
-                <div className="bottom-paragraph">FinTech</div>
+                <div className="bottom-paragraph">{user?.education.sector}</div>
               </div>
               <div className="detail-wrapper">
                 <p className="top-paragraph">DURATION OF EMPLOYMENT</p>
-                <div className="bottom-paragraph">2 Years</div>
+                <div className="bottom-paragraph">
+                  {user?.education.duration}
+                </div>
               </div>
             </div>
             <div className="lower-section">
               <div className="detail-wrapper">
                 <p className="top-paragraph">OFFICIAL EMAIL</p>
-                <div className="bottom-paragraph">grace@lendsqr.com</div>
+                <div className="bottom-paragraph">
+                  {user?.education.officeEmail}
+                </div>
               </div>
               <div className="detail-wrapper">
                 <p className="top-paragraph">MONTHLY INCOME</p>
-                <div className="bottom-paragraph">₦200,000.00- ₦400,000.00</div>
+                <div className="bottom-paragraph">
+                  {currency}
+                  {user?.education.monthlyIncome[0]?.toLocaleString()}-
+                  {currency}
+                  {user?.education.monthlyIncome[1]?.toLocaleString()}
+                </div>
               </div>
 
               <div className="detail-wrapper">
                 <p className="top-paragraph">LOAN REPAYMENT</p>
-                <div className="bottom-paragraph">G40,000</div>
+                <div className="bottom-paragraph">
+                  {currency}
+                  {user?.education.loanRepayment}
+                </div>
               </div>
             </div>
             <hr />
@@ -155,16 +196,22 @@ const User = () => {
               <div className="social-wrap flex gap-[12rem]">
                 <div className="detail-wrapper">
                   <p className="top-paragraph">TWITTER</p>
-                  <div className="bottom-paragraph">@grace_effiom</div>
+                  <div className="bottom-paragraph">
+                    {user?.socials.twitter}
+                  </div>
                 </div>
                 <div className="detail-wrapper">
                   <p className="top-paragraph">FACEBOOK</p>
-                  <div className="bottom-paragraph">Grace Effiom</div>
+                  <div className="bottom-paragraph">
+                    {user?.socials.facebook}
+                  </div>
                 </div>
 
                 <div className="detail-wrapper">
                   <p className="top-paragraph">INSTAGRAM</p>
-                  <div className="bottom-paragraph">@grace_effiom</div>
+                  <div className="bottom-paragraph">
+                    {user?.socials.instagram}
+                  </div>
                 </div>
               </div>
             </div>
@@ -174,11 +221,15 @@ const User = () => {
               <div className="social-wrap flex gap-[12rem]">
                 <div className="detail-wrapper">
                   <p className="top-paragraph">FULL NAME</p>
-                  <div className="bottom-paragraph">Debby Ogana</div>
+                  <div className="bottom-paragraph">
+                    {user?.guarantor.firstName + " " + user?.guarantor.lastName}
+                  </div>
                 </div>
                 <div className="detail-wrapper">
                   <p className="top-paragraph">PHONE NUMBER</p>
-                  <div className="bottom-paragraph">07060780922</div>
+                  <div className="bottom-paragraph">
+                    {user?.guarantor.phoneNumber}
+                  </div>
                 </div>
 
                 <div className="detail-wrapper">
@@ -196,11 +247,16 @@ const User = () => {
               <div className="social-wrap flex gap-[12rem]">
                 <div className="detail-wrapper">
                   <p className="top-paragraph">FULL NAME</p>
-                  <div className="bottom-paragraph">Debby Ogana</div>
+                  <div className="bottom-paragraph">
+                    {user?.guarantor.firstName + " " + user?.guarantor.lastName}
+                  </div>
                 </div>
                 <div className="detail-wrapper">
                   <p className="top-paragraph">PHONE NUMBER</p>
-                  <div className="bottom-paragraph">07060780922</div>
+                  <div className="bottom-paragraph">
+                    {" "}
+                    {user?.guarantor.phoneNumber}
+                  </div>
                 </div>
 
                 <div className="detail-wrapper">

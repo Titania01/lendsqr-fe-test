@@ -1,5 +1,5 @@
 aside {
-  @apply pb-6;
+  @apply pb-6 h-full flex flex-col;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
 
   .image-wrap {

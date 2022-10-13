@@ -1,4 +1,3 @@
-import Input from "../../atoms/input";
 import "./authPage.scss";
 
 const AuthPage = () => {
