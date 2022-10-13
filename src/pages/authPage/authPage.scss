@@ -1,0 +1,40 @@
+.auth-page-wrapper {
+  @apply w-full h-screen grid overflow-hidden;
+  grid-template-columns: repeat(2, 1fr);
+
+  .hero-side {
+    @apply flex flex-col justify-start;
+
+    .logo {
+      @apply ml-[12.0625rem] mt-[6.625rem];
+    }
+
+    .hero {
+      @apply w-full flex items-center justify-center mt-32;
+    }
+  }
+
+  .login-side {
+    box-shadow: 0px 15px 90px rgba(0, 0, 0, 0.03);
+
+    .input-container {
+      @apply w-full ml-[6.25rem] mt-[13.75rem];
+
+      .input-header {
+        @apply text-purple text-[40px] font-bold;
+      }
+
+      .input-wrap {
+        @apply border-2 py-4 rounded-md px-4 w-[70%] border-solid border-[#545f7d26];
+
+        input {
+          @apply bg-transparent border-none outline-none;
+        }
+      }
+
+      .button {
+        @apply bg-lemon rounded-lg w-[70%] flex items-center justify-center my-4 py-4 font-semibold text-sm text-white;
+      }
+    }
+  }
+}

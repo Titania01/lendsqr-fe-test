@@ -1,0 +1,15 @@
+.input-container {
+  @apply w-full;
+
+  label {
+    @apply text-sm text-primary;
+  }
+
+  .input-style {
+    @apply py-4 rounded-md text-sm font-normal flex justify-between items-center px-4;
+
+    ::placeholder {
+      @apply text-primary text-sm font-normal;
+    }
+  }
+}

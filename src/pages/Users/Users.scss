@@ -1,0 +1,7 @@
+.users-container {
+  @apply flex w-full;
+
+  .header {
+    @apply text-purple pl-[3.75rem] pb-10 pt-[3.75rem];
+  }
+}

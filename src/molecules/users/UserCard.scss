@@ -1,0 +1,8 @@
+.card-wrapper {
+  @apply flex;
+
+  .card-holder {
+    @apply flex bg-white h-[10rem] gap-3 justify-center w-[20rem] rounded-md flex-col pl-[1.875rem] ml-[3.75rem] mb-10;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  }
+}

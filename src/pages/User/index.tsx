@@ -1,0 +1,224 @@
+import Button from "../../atoms/button";
+import DashboardLayout from "../../templates/dashboardLayout";
+import Avatar from "../../vectors/Avatar";
+import "./SingleUser.scss";
+
+const User = () => {
+  return (
+    <DashboardLayout>
+      <div className="single-user-wrap">
+        <div className="user-pointer">
+          <div className="arrow">
+            <img src="/vectors/pointarrowIcon.svg" alt="" />
+          </div>
+          <p>Back to Users</p>
+        </div>
+
+        <div className="user-detail-wrap">
+          <h3>User Details</h3>
+          <div className="button-container">
+            <div className="button w-[10.625rem] text-tomato ">
+              <Button
+                customClasses="border border-tomato rounded-lg text-sm font-semibold"
+                outline
+              >
+                BLACKLIST USER
+              </Button>
+            </div>
+            <div className="button w-[10.625rem] text-blueish ">
+              <Button
+                customClasses="border border-blueish rounded-lg text-sm font-semibold"
+                outline
+              >
+                ACTIVATE USER
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        <div className="general-details-wrap">
+          <div className="top-section">
+            <div className="avatar-wrap">
+              <img src="/vectors/avatar.svg" alt="" />
+            </div>
+            <div className="grace">
+              <div className="detail">
+                <h3>Grace Effiom</h3>
+                <p>LSQFf587g90</p>
+              </div>
+              <div className="line"></div>
+              <div className="user-tier">
+                <h4>User’s Tier</h4>
+                <div className="star-wrap">
+                  <img src="/vectors/stars.svg" alt="" />
+                </div>
+              </div>
+              <div className="line"></div>
+              <div className="providus">
+                <h3>₦200,000.00</h3>
+                <p>9912345678/Providus Bank</p>
+              </div>
+            </div>
+          </div>
+          <div className="bottom-section">
+            <h2 className="text-blueish border-b-2 border-blueish">
+              General Details
+            </h2>
+            <h2>Documents</h2>
+            <h2>Bank Details</h2>
+            <h2>Loans</h2>
+            <h2>Savings</h2>
+            <h2>App and System</h2>
+          </div>
+        </div>
+
+        <div className="personal-info-wrap">
+          <h1 className="header">Personal Information</h1>
+          <div className="first-section">
+            <div className="upper-section">
+              <div className="detail-wrapper">
+                <p className="top-paragraph">FULL NAME</p>
+                <div className="bottom-paragraph">Grace Effiom</div>
+              </div>
+              <div className="detail-wrapper">
+                <p className="top-paragraph">PHONE NUMBER</p>
+                <div className="bottom-paragraph">07060780922</div>
+              </div>
+              <div className="detail-wrapper">
+                <p className="top-paragraph">EMAIL ADDRESS</p>
+                <div className="bottom-paragraph">grace@gmail.com</div>
+              </div>
+              <div className="detail-wrapper">
+                <p className="top-paragraph">BVN</p>
+                <div className="bottom-paragraph">07060780922</div>
+              </div>
+              <div className="detail-wrapper">
+                <p className="top-paragraph">GENDER</p>
+                <div className="bottom-paragraph">Female</div>
+              </div>
+            </div>
+            <div className="lower-section">
+              <div className="detail-wrapper">
+                <p className="top-paragraph">MARITAL STATUS</p>
+                <div className="bottom-paragraph">Single</div>
+              </div>
+              <div className="detail-wrapper">
+                <p className="top-paragraph">CHILDREN</p>
+                <div className="bottom-paragraph">None</div>
+              </div>
+              <div className="detail-wrapper">
+                <p className="top-paragraph">TYPE OF RESIDENCE</p>
+                <div className="bottom-paragraph">Parent’s Apartment</div>
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <h1 className="header pt-8">Education and Employment</h1>
+          <div className="first-section">
+            <div className="upper-section">
+              <div className="detail-wrapper">
+                <p className="top-paragraph">LEVEL OF EDUCATION</p>
+                <div className="bottom-paragraph">B.Sc</div>
+              </div>
+              <div className="detail-wrapper">
+                <p className="top-paragraph">EMPLOYMENT STATUS</p>
+                <div className="bottom-paragraph">Employed</div>
+              </div>
+              <div className="detail-wrapper">
+                <p className="top-paragraph">SECTOR OF EMPLOYMENT</p>
+                <div className="bottom-paragraph">FinTech</div>
+              </div>
+              <div className="detail-wrapper">
+                <p className="top-paragraph">DURATION OF EMPLOYMENT</p>
+                <div className="bottom-paragraph">2 Years</div>
+              </div>
+            </div>
+            <div className="lower-section">
+              <div className="detail-wrapper">
+                <p className="top-paragraph">OFFICIAL EMAIL</p>
+                <div className="bottom-paragraph">grace@lendsqr.com</div>
+              </div>
+              <div className="detail-wrapper">
+                <p className="top-paragraph">MONTHLY INCOME</p>
+                <div className="bottom-paragraph">₦200,000.00- ₦400,000.00</div>
+              </div>
+
+              <div className="detail-wrapper">
+                <p className="top-paragraph">LOAN REPAYMENT</p>
+                <div className="bottom-paragraph">G40,000</div>
+              </div>
+            </div>
+            <hr />
+            <div className="flex flex-col">
+              <h1 className="header">Socials</h1>
+              <div className="social-wrap flex gap-[12rem]">
+                <div className="detail-wrapper">
+                  <p className="top-paragraph">TWITTER</p>
+                  <div className="bottom-paragraph">@grace_effiom</div>
+                </div>
+                <div className="detail-wrapper">
+                  <p className="top-paragraph">FACEBOOK</p>
+                  <div className="bottom-paragraph">Grace Effiom</div>
+                </div>
+
+                <div className="detail-wrapper">
+                  <p className="top-paragraph">INSTAGRAM</p>
+                  <div className="bottom-paragraph">@grace_effiom</div>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div className="flex flex-col">
+              <h1 className="header">Guarantor</h1>
+              <div className="social-wrap flex gap-[12rem]">
+                <div className="detail-wrapper">
+                  <p className="top-paragraph">FULL NAME</p>
+                  <div className="bottom-paragraph">Debby Ogana</div>
+                </div>
+                <div className="detail-wrapper">
+                  <p className="top-paragraph">PHONE NUMBER</p>
+                  <div className="bottom-paragraph">07060780922</div>
+                </div>
+
+                <div className="detail-wrapper">
+                  <p className="top-paragraph">EMAIL ADDRESS</p>
+                  <div className="bottom-paragraph">debby@gmail.com</div>
+                </div>
+                <div className="detail-wrapper">
+                  <p className="top-paragraph">RELATIONSHIP</p>
+                  <div className="bottom-paragraph">Sister</div>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div className="flex flex-col">
+              <div className="social-wrap flex gap-[12rem]">
+                <div className="detail-wrapper">
+                  <p className="top-paragraph">FULL NAME</p>
+                  <div className="bottom-paragraph">Debby Ogana</div>
+                </div>
+                <div className="detail-wrapper">
+                  <p className="top-paragraph">PHONE NUMBER</p>
+                  <div className="bottom-paragraph">07060780922</div>
+                </div>
+
+                <div className="detail-wrapper">
+                  <p className="top-paragraph">EMAIL ADDRESS</p>
+                  <div className="bottom-paragraph">debby@gmail.com</div>
+                </div>
+                <div className="detail-wrapper">
+                  <p className="top-paragraph">RELATIONSHIP</p>
+                  <div className="bottom-paragraph">Sister</div>
+                </div>
+              </div>
+            </div>
+            <hr />
+          </div>
+        </div>
+      </div>
+    </DashboardLayout>
+  );
+};
+
+export default User;
