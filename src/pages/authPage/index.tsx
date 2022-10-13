@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./authPage.scss";
 
 const AuthPage = () => {
@@ -28,9 +29,11 @@ const AuthPage = () => {
           </div>
           <p className="text-lemon text-xs font-semibold">Forgot PASSWORD?</p>
 
-          <div className="button">
-            <button>LOG IN</button>
-          </div>
+          <Link to="/users">
+            <div className="button">
+              <button>LOG IN</button>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
