@@ -8,6 +8,7 @@ import type {
 import { useState } from "react";
 import "antd/dist/antd.css";
 import "./Table.scss";
+
 interface DataType {
   key: number;
   organization: string;
@@ -45,7 +46,7 @@ const Tablee = ({
 
   const columns: ColumnsType<DataType> = [
     {
-      title: "organization",
+      title: "ORGANIZATION",
       dataIndex: "organization",
       key: "organization",
       filters: [
@@ -56,7 +57,7 @@ const Tablee = ({
       ellipsis: true,
     },
     {
-      title: "Username",
+      title: "USERNAME",
       dataIndex: "username",
       key: "username",
       filters: [
@@ -67,7 +68,7 @@ const Tablee = ({
       ellipsis: true,
     },
     {
-      title: "Email",
+      title: "EMAIL",
       dataIndex: "email",
       key: "email",
       filters: [
@@ -79,7 +80,7 @@ const Tablee = ({
       ellipsis: true,
     },
     {
-      title: "Phone number",
+      title: "PHONE NUMBER",
       dataIndex: "phonenumber",
       key: "phonenumber",
       filters: [
@@ -90,7 +91,7 @@ const Tablee = ({
       ellipsis: true,
     },
     {
-      title: "Date joined",
+      title: "DATE JOINED",
       dataIndex: "date",
       key: "date",
       filters: [
@@ -102,7 +103,7 @@ const Tablee = ({
       ellipsis: true,
     },
     {
-      title: "Status",
+      title: "STATUS",
       dataIndex: "status",
       key: "status",
       filters: [
@@ -114,7 +115,7 @@ const Tablee = ({
       ellipsis: true,
     },
     {
-      title: "Action",
+      title: "",
       dataIndex: "operation",
       key: "operation",
       render: (_, record: { key: React.Key }) => (

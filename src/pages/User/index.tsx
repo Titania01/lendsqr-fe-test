@@ -105,11 +105,16 @@ const User = () => {
             <div className="upper-section">
               <div className="detail-wrapper">
                 <p className="top-paragraph">FULL NAME</p>
-                <div className="bottom-paragraph">Grace Effiom</div>
+                <div className="bottom-paragraph">
+                  {" "}
+                  {user?.guarantor.firstName + " " + user?.guarantor.lastName}
+                </div>
               </div>
               <div className="detail-wrapper">
                 <p className="top-paragraph">PHONE NUMBER</p>
-                <div className="bottom-paragraph">07060780922</div>
+                <div className="bottom-paragraph">
+                  {user?.guarantor.phoneNumber}
+                </div>
               </div>
               <div className="detail-wrapper">
                 <p className="top-paragraph">EMAIL ADDRESS</p>
@@ -121,7 +126,7 @@ const User = () => {
               </div>
               <div className="detail-wrapper">
                 <p className="top-paragraph">GENDER</p>
-                <div className="bottom-paragraph">Female</div>
+                <div className="bottom-paragraph">{user?.profile.gender}</div>
               </div>
             </div>
             <div className="lower-section">
@@ -234,7 +239,7 @@ const User = () => {
 
                 <div className="detail-wrapper">
                   <p className="top-paragraph">EMAIL ADDRESS</p>
-                  <div className="bottom-paragraph">debby@gmail.com</div>
+                  <div className="bottom-paragraph">{user?.email}</div>
                 </div>
                 <div className="detail-wrapper">
                   <p className="top-paragraph">RELATIONSHIP</p>
@@ -254,14 +259,13 @@ const User = () => {
                 <div className="detail-wrapper">
                   <p className="top-paragraph">PHONE NUMBER</p>
                   <div className="bottom-paragraph">
-                    {" "}
                     {user?.guarantor.phoneNumber}
                   </div>
                 </div>
 
                 <div className="detail-wrapper">
                   <p className="top-paragraph">EMAIL ADDRESS</p>
-                  <div className="bottom-paragraph">debby@gmail.com</div>
+                  <div className="bottom-paragraph">{user?.email}</div>
                 </div>
                 <div className="detail-wrapper">
                   <p className="top-paragraph">RELATIONSHIP</p>
