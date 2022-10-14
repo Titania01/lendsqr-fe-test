@@ -1,5 +1,5 @@
 .dashboard-layout {
-  @apply grid grid-cols-[18rem_1fr] h-screen w-screen overflow-hidden;
+  @apply grid grid-cols-[18rem_1fr]  h-screen w-screen overflow-hidden;
 }
 .head-nav {
   box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);

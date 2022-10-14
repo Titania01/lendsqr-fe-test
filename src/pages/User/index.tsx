@@ -3,7 +3,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import Button from "../../components/atoms/button";
 import { fetchFromApi } from "../../services";
 import DashboardLayout from "../../templates/dashboardLayout";
-import Avatar from "../../vectors/Avatar";
 import "./SingleUser.scss";
 
 const User = () => {

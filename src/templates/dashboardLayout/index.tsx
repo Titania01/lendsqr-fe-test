@@ -8,7 +8,7 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
       <div className="overflow-hidden h-full">
         <Sidenav />
       </div>
-      <main className="overflow-y-auto">
+      <main className="overflow-hidden flex flex-col">
         <header className="head-nav">
           <div className="input-wrap">
             <input type="text" placeholder="Search for anything" />
@@ -34,7 +34,9 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
             </div>
           </div>
         </header>
-        <section className="bg-grey">{children}</section>
+        <section className="bg-grey flex-grow overflow-y-auto">
+          {children}
+        </section>
       </main>
     </div>
   );

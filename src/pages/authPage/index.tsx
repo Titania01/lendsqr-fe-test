@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./authPage.scss";
 
 const AuthPage = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="auth-page-wrapper">
       <div className="hero-side">
@@ -29,11 +31,9 @@ const AuthPage = () => {
           </div>
           <p className="text-lemon text-xs font-semibold">Forgot PASSWORD?</p>
 
-          <Link to="/users">
-            <div className="button">
-              <button>LOG IN</button>
-            </div>
-          </Link>
+          <div className="button" onClick={() => navigate("/users")}>
+            <button>LOG IN</button>
+          </div>
         </div>
       </div>
     </div>
