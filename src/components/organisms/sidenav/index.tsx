@@ -96,7 +96,7 @@ const Sidenav = () => {
       </div>
       <div className="flex-grow overflow-y-auto">
         {nav.map((n, i) => (
-          <div className="nav-link">
+          <div className="nav-link" key={i}>
             <span>{n.title}</span>
             {n.hasOwnProperty("submenu") && (
               <div className="submenu-nav">
@@ -105,6 +105,7 @@ const Sidenav = () => {
                     className={`link-wrap ${
                       isActive == menu.link ? "active" : ""
                     }`}
+                    key={index}
                   >
                     <div className="vectors-wrap">
                       <img src={`/vectors/${menu.icon}`} />

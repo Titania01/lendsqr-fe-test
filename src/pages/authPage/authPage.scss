@@ -1,6 +1,5 @@
 .auth-page-wrapper {
-  @apply w-full h-screen flex-col md:grid overflow-hidden;
-  grid-template-columns: repeat(2, 1fr);
+  @apply w-full h-screen flex-col grid-cols-[1fr_1fr] md:grid overflow-hidden;
 
   .hero-side {
     @apply flex flex-col justify-start;

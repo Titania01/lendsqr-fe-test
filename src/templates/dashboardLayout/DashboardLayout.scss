@@ -6,7 +6,7 @@
   @apply bg-white flex items-center justify-between pl-[5rem] pr-8 h-[6.5rem] w-full;
 
   .input-wrap {
-    @apply flex justify-between border border-opacity-20 border-purple w-[25rem]  items-center rounded-lg;
+    @apply flex my-4 justify-between border border-opacity-20 border-purple w-[25rem]  items-center rounded-lg;
 
     input {
       @apply outline-none border-none pl-4;
@@ -17,7 +17,7 @@
     }
   }
   .right {
-    @apply flex items-center space-x-8;
+    @apply hidden md:flex items-center space-x-8;
 
     .user-wrap {
       @apply flex gap-2 cursor-pointer;

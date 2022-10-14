@@ -60,13 +60,8 @@ const Users = () => {
       </div>
       <div className="card-wrapper">
         {userData.map((user, index) => (
-          <div className="wrapper">
-            <UserCard
-              img={user.img}
-              title={user.title}
-              count={user.number}
-              key={index}
-            />
+          <div className="wrapper" key={index}>
+            <UserCard img={user.img} title={user.title} count={user.number} />
           </div>
         ))}
       </div>
