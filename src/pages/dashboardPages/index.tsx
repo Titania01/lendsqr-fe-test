@@ -1,4 +1,3 @@
-import Sidenav from "../../components/organisms/sidenav";
 import DashboardLayout from "../../templates/dashboardLayout";
 
 const DashboardPage = () => {

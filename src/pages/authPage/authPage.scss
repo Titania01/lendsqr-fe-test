@@ -1,5 +1,5 @@
 .auth-page-wrapper {
-  @apply w-full h-screen grid overflow-hidden;
+  @apply w-full h-screen flex-col md:grid overflow-hidden;
   grid-template-columns: repeat(2, 1fr);
 
   .hero-side {
@@ -10,7 +10,7 @@
     }
 
     .hero {
-      @apply w-full flex items-center justify-center mt-32;
+      @apply w-full hidden md:flex items-center justify-center mt-32;
     }
   }
 

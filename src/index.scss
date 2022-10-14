@@ -17,4 +17,9 @@ body {
 :root {
   font-size: 16px;
 }
+@media (max-width: 650px) {
+  :root {
+    font-size: 10px;
+  }
+}
 @tailwind utilities;

@@ -1,5 +1,5 @@
 .card-wrapper {
-  @apply flex;
+  @apply flex flex-col md:flex-row;
 
   .card-holder {
     @apply flex bg-white h-[10rem] gap-3 justify-center w-[20rem] rounded-md flex-col pl-[1.875rem] ml-[3.75rem] mb-10;
