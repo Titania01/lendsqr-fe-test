@@ -40,12 +40,12 @@
     }
 
     .bottom-section {
-      @apply pt-[3.1875rem] pb-3 font-normal flex flex-col md:flex-row md:items-center items-start  justify-between pl-12 pr-9;
+      @apply pt-[3.1875rem] pb-3 font-normal flex flex-col md:flex-row md:items-center items-start  justify-between pl-4 md:pl-12 pr-9;
     }
   }
 
   .personal-info-wrap {
-    @apply bg-white text-start mb-[5.215rem] py-[1.875rem] px-[1.875rem] rounded-md;
+    @apply bg-white w-full text-start mb-[5.215rem] py-[1.875rem] px-[1.875rem] rounded-md;
 
     .header {
       @apply text-purple font-medium pb-[1.875rem];
@@ -55,11 +55,11 @@
       @apply flex gap-8 flex-col;
 
       .upper-section {
-        @apply flex gap-[12rem] items-center;
+        @apply flex gap-4 items-start md:gap-[12rem] flex-col md:flex-row md:items-center;
       }
 
       .lower-section {
-        @apply flex gap-[12rem] items-center;
+        @apply flex gap-4 items-start md:gap-[12rem] flex-col md:flex-row md:items-center;
       }
 
       .top-paragraph {

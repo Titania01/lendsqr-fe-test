@@ -111,7 +111,6 @@ const User = () => {
                   <div className="detail-wrapper">
                     <p className="top-paragraph">FULL NAME</p>
                     <div className="bottom-paragraph">
-                      {" "}
                       {user?.guarantor.firstName +
                         " " +
                         user?.guarantor.lastName}
