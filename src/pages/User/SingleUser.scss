@@ -17,7 +17,7 @@
     @apply bg-white w-full mt-10 mb-[1.875rem] rounded-md;
 
     h3 {
-      @apply text-purple font-medium text-[10px] md:text-[22px];
+      @apply text-purple font-medium text-[22px];
     }
 
     h4 {
@@ -29,7 +29,7 @@
     }
 
     .top-section {
-      @apply flex items-center gap-[1.875rem] p-[1.875rem];
+      @apply flex flex-col md:flex-row items-center gap-[1.875rem] p-[1.875rem];
 
       .grace {
         @apply flex items-center gap-[1.875rem];
@@ -40,12 +40,12 @@
     }
 
     .bottom-section {
-      @apply pt-[3.1875rem] pb-3 font-normal flex items-center justify-between pl-12 pr-9;
+      @apply pt-[3.1875rem] pb-3 font-normal flex flex-col md:flex-row md:items-center items-start  justify-between pl-12 pr-9;
     }
   }
 
   .personal-info-wrap {
-    @apply bg-white text-start w-full mb-[5.215rem] py-[1.875rem] px-[1.875rem] rounded-md;
+    @apply bg-white text-start mb-[5.215rem] py-[1.875rem] px-[1.875rem] rounded-md;
 
     .header {
       @apply text-purple font-medium pb-[1.875rem];
