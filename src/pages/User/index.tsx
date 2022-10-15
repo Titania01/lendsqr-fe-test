@@ -210,7 +210,7 @@ const User = () => {
                 <hr />
                 <div className="flex flex-col">
                   <h1 className="header">Socials</h1>
-                  <div className="social-wrap flex gap-[12rem]">
+                  <div className="social-wrap flex gap-4 items-start md:gap-[12rem] flex-col md:flex-row md:items-center">
                     <div className="detail-wrapper">
                       <p className="top-paragraph">TWITTER</p>
                       <div className="bottom-paragraph">
@@ -235,7 +235,7 @@ const User = () => {
                 <hr />
                 <div className="flex flex-col">
                   <h1 className="header">Guarantor</h1>
-                  <div className="social-wrap flex gap-[12rem]">
+                  <div className="social-wrap flex gap-4 items-start md:gap-[12rem] flex-col md:flex-row md:items-center">
                     <div className="detail-wrapper">
                       <p className="top-paragraph">FULL NAME</p>
                       <div className="bottom-paragraph">
@@ -263,7 +263,7 @@ const User = () => {
                 </div>
                 <hr />
                 <div className="flex flex-col">
-                  <div className="social-wrap flex gap-[12rem]">
+                  <div className="social-wrap flex gap-4 items-start md:gap-[12rem] flex-col md:flex-row md:items-center">
                     <div className="detail-wrapper">
                       <p className="top-paragraph">FULL NAME</p>
                       <div className="bottom-paragraph">
