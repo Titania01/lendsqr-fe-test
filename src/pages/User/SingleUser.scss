@@ -2,7 +2,7 @@
   @apply flex flex-col w-full pt-16 px-[3.75rem];
 
   .user-pointer {
-    @apply flex items-center pb-8 space-x-2;
+    @apply flex  cursor-pointer items-center pb-8 space-x-2;
   }
 
   .user-detail-wrap {
@@ -17,7 +17,7 @@
     @apply bg-white w-full mt-10 mb-[1.875rem] rounded-md;
 
     h3 {
-      @apply text-purple font-medium text-[22px];
+      @apply text-purple font-medium text-[10px] md:text-[22px];
     }
 
     h4 {

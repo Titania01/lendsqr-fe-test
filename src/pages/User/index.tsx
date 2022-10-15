@@ -33,10 +33,7 @@ const User = () => {
   return (
     <DashboardLayout>
       <div className="single-user-wrap">
-        <div
-          className="user-pointer cursor-pointer"
-          onClick={() => navigate("/users")}
-        >
+        <div className="user-pointer" onClick={() => navigate("/users")}>
           <div className="arrow">
             <img src="/vectors/pointarrowIcon.svg" alt="" />
           </div>
