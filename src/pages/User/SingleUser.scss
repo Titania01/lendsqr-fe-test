@@ -6,7 +6,7 @@
   }
 
   .user-detail-wrap {
-    @apply flex items-center justify-between;
+    @apply flex flex-col md:flex-row items-start gap-3 md:gap-0 md:items-center justify-between;
 
     .button-container {
       @apply flex space-x-5;
