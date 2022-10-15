@@ -32,9 +32,9 @@
       @apply flex flex-col md:flex-row items-center gap-[1.875rem] p-[1.875rem];
 
       .grace {
-        @apply flex items-center gap-[1.875rem];
+        @apply flex flex-col md:flex-row items-start md:items-center gap-[1.875rem];
         .line {
-          @apply bg-purple opacity-20 w-[1px] h-[6rem];
+          @apply hidden md:flex bg-purple opacity-20 w-[1px] h-[6rem];
         }
       }
     }
